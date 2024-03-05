@@ -129,7 +129,7 @@ func SignEnd(txStr string, txSignStr string) (string, error) {
 //		 expiration - transaction expiration time, beyond this time the transaction will not be packed
 //		 timestamp - transaction creation time
 //		 fee_limit - the maximum energy consumption of smart contract transactions, only need to be set when deploying or calling smart contracts
-func newTransfer(fromAddress string, toAddress string, amount int64, refBlockBytes string, refBlockHash string, expiration int64, timestamp int64) (string, error) {
+func NewTransfer(fromAddress string, toAddress string, amount int64, refBlockBytes string, refBlockHash string, expiration int64, timestamp int64) (string, error) {
 	owner, err := GetAddressHash(fromAddress)
 	if err != nil {
 		return "", err
